@@ -1,0 +1,32 @@
+<div platform>
+    <md-sidenav-layout fullscreen>
+        <md-sidenav #sidenav>
+            <md-toolbar class="md-secondary">
+                Menu
+            </md-toolbar>
+            <md-nav-list>
+                <a md-list-item [routerLink]="['/']">
+                    <span md-line>Profile</span>
+                </a>
+                <a md-list-item [routerLink]="['/leaderboards']">
+                    <span md-line>Leaderboards</span>
+                </a>
+                <a md-list-item [routerLink]="['/teams']">
+                    <span md-line>Teams</span>
+                </a>
+                <a md-list-item (click)="auth.logout()">
+                    <span md-line>Logout</span>
+                </a>
+            </md-nav-list>
+        </md-sidenav>
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <button md-icon-button (click)="sidenav.open()">
+                    <md-icon>menu</md-icon>
+                </button>
+                <span>Academy</span>
+            </div>
+        </md-toolbar>
+        <router-outlet></router-outlet>
+    </md-sidenav-layout>
+</div>

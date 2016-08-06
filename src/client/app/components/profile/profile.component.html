@@ -1,0 +1,36 @@
+<h1>Welcome <span *ngIf="authService.authUser">{{ authService.authUser.name }}</span></h1>
+
+
+
+<md-tab-group>
+    <md-tab>
+        <template md-tab-label>Badges</template>
+        <template md-tab-content>
+            <h4>Some tab content</h4>
+            <p>...</p>
+        </template>
+    </md-tab>
+    <md-tab>
+        <template md-tab-label>History</template>
+        <template md-tab-content>
+            <h4>Some more tab content</h4>
+            <p>...</p>
+        </template>
+    </md-tab>
+</md-tab-group>
+
+<div class="fixed-action-btn">
+    <button md-fab color="primary">
+        <md-icon class="md-24">add</md-icon>
+    </button>
+</div>
+<!--<div [text]"authService.user"></div>-->
+
+<!--<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" [placeholder]="'INPUT_HINT' | translate">
+  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
+</form>
+
+<ul>
+  <li *ngFor="let name of nameListService.names | async">{{name}}</li>
+</ul>-->
